@@ -5,13 +5,13 @@ import numpy as np
 from dirigo import units
 from dirigo.sw_interfaces.worker import EndOfStream
 from dirigo.sw_interfaces.display import Display, DisplayProduct
-from dirigo.sw_interfaces import Logger
+from dirigo.sw_interfaces import Writer
 from dirigo.plugins.acquisitions import FrameAcquisition
 
 
 
 
-class PngLogger(Logger):
+class PngWriter(Writer):
 
     def __init__(self,
                  upstream: Display,

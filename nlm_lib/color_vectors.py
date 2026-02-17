@@ -14,6 +14,17 @@ class Hematoxylin(ColorVector):
     rgb = (0.65111, 0.70119, 0.29049)
 
 
+class HematoxylinNLM(ColorVector):
+    """
+    Hematoxylin color vector.
+    
+    More blue than QuPath default.
+    """
+    slug = "hematoxylin_nlm"
+    label = "Hematoxylin (NLM)"
+    rgb = (0.6358, 0.7393, 0.2218)
+
+
 class Eosin(ColorVector):
     """
     Eosin color vector.
@@ -23,6 +34,17 @@ class Eosin(ColorVector):
     slug = "eosin"
     label = "Eosin"
     rgb = (0.2159, 0.8012, 0.5581)
+
+
+class EosinNLM(ColorVector):
+    """
+    Eosin color vector.
+    
+    More red than QuPath default.
+    """
+    slug = "eosin_nlm"
+    label = "Eosin (NLM)"
+    rgb = (0.09048, 0.9048, 0.4162)
 
 
 class DAB(ColorVector):

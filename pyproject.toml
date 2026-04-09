@@ -3,29 +3,40 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "nlm-lib"
-version = "0.1.3"
+name = "nlm-path-lib"
+version = "0.1.4"
 description = "Nonlinear microscopy of pathology specimens (NLM) specific code and resources."
 authors = [
     {name = "T. D. Weber", email = "tweber@mit.edu"}
 ]
 license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft :: Windows",
+]
 dependencies = [
     "dirigo",
     "pillow"
 ]
+urls = {"Homepage" = "https://github.com/tweber225/nlm-path-lib"}
 
 # Provide additional color vectors and transfer functions to dirigo
 [project.entry-points."dirigo_color_vectors"]
-hematoxylin = "nlm_lib.color_vectors:Hematoxylin"
-eosin = "nlm_lib.color_vectors:Eosin"
-hematoxylin_nlm = "nlm_lib.color_vectors:HematoxylinNLM"
-eosin_nlm = "nlm_lib.color_vectors:EosinNLM"
-dab = "nlm_lib.color_vectors:DAB"
+hematoxylin = "nlm_path_lib.color_vectors:Hematoxylin"
+eosin = "nlm_path_lib.color_vectors:Eosin"
+hematoxylin_nlm = "nlm_path_lib.color_vectors:HematoxylinNLM"
+eosin_nlm = "nlm_path_lib.color_vectors:EosinNLM"
+dab = "nlm_path_lib.color_vectors:DAB"
 
 [project.entry-points."dirigo_transfer_functions"]
-negative_exponential = "nlm_lib.transfer_functions:NegativeExponential"
+negative_exponential = "nlm_path_lib.transfer_functions:NegativeExponential"
 
 # Custom writer for "snap" acquisitions
 [project.entry-points."dirigo_writers"]
-png = "nlm_lib.writers:PngWriter"
+png = "nlm_path_lib.writers:PngWriter"
